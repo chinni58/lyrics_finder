@@ -1,0 +1,21 @@
+{% extends "finder/base.html" %}
+{% block title %}{{ title }} Lyrics{% endblock %}
+
+{% block content %}
+  <div style="text-align:center;margin-bottom:1.5rem;">
+      <h2>{{ title }}</h2>
+      <h3 style="color:#666;font-weight:normal;">by {{ artist }}</h3>
+  </div>
+
+  {% if lyrics %}
+      <pre>{{ lyrics }}</pre>
+  {% else %}
+      <p style="color:red;text-align:center;">{{ error }}</p>
+  {% endif %}
+
+  <div style="text-align:center;margin-top:1.5rem;">
+      <a href="{% url 'search' %}">
+          <button style="background:#9b59b6;">🔍 Search Another Song</button>
+      </a>
+  </div>
+{% endblock %}

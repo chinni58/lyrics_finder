@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Lyrics Finder{% endblock %}</title>
+    <style>
+        /* ===== Base Aesthetic Style ===== */
+        :root {
+            --primary: #6c63ff;
+            --gradient: linear-gradient(135deg, #6c63ff, #9b59b6);
+            --light-bg: #f8f9fd;
+            --text-dark: #2d2d2d;
+            --text-muted: #777;
+            --radius: 14px;
+        }
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: var(--light-bg);
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background: var(--gradient);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+        main {
+            flex: 1;
+            width: 100%;
+            max-width: 700px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #584cf4;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background: #f3f3ff;
+            padding: 1.2rem;
+            border-radius: var(--radius);
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        h2 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎵 Song Lyrics Finder</h1>
+        <p style="margin-top:0.3rem;">Search and discover lyrics from any language 🌍</p>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        Made with 💜 using Django & Genius API
+    </footer>
+</body>
+</html>
