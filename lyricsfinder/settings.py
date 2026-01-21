@@ -26,9 +26,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k_kpfz-dpd_cm0r12da7ecsv)h*4hnuop#5xm6-eda@i)!&g&+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["lyrics-finder-dsq4.onrender.com",]
 
 
 # Application definition
